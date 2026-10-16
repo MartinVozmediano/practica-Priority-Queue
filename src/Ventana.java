@@ -17,6 +17,7 @@ public class Ventana {
     private JButton btnPasajeroActual;
     private Cola cola1=new Cola();
 
+    //Metodo para mostrar la cola ordenada por prioridad
     public void mostrar(){
         List<Pasajero> resultado = cola1.transformar();
         Collections.sort(resultado);
