@@ -1,10 +1,11 @@
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class Cola {
-    private Queue<Pasajero> coleccion;
+    // private Queue<Pasajero> coleccion;
+        private PriorityQueue<Pasajero> coleccion;
     public Cola(){
-        coleccion=new LinkedList<>();
+        //coleccion=new LinkedList<>();
+        coleccion = new PriorityQueue<>();
         predefinir();
     }
 
@@ -48,4 +49,10 @@ public class Cola {
         return sb.toString().length()!=0?sb.toString():
                 "Cola sin elementos";
     }
+
+    //Transformar de una PriorityQueue hacia ArrayList
+    public List<Pasajero> transformar(){
+        return new ArrayList<>(coleccion);
+    }
+
 }
